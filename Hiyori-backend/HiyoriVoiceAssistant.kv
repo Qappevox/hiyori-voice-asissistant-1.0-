@@ -1,0 +1,25 @@
+#:import utils kivy.utils
+<App>:
+    processLabel: processLabel
+    eventLabel: eventLabel
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: processLabel
+            text: " "
+            font_size: 16
+            color: 0.0, 0.0, 0.0
+        MDIconButton:
+            on_press: root.change_text()
+            on_release: root.main(), root.change_text()
+            icon: "microphone"
+            icon_size: "100sp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        Label:
+            id: eventLabel
+            text: " "
+            text_size: self.size
+            halign: 'left'
+            valign: 'top'
+            font_size: 12
+            color: 0.0, 0.0, 0.0
